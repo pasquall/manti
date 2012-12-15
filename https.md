@@ -42,7 +42,7 @@ que esta acessando, sera´ possivel ler tudo que foi comunicado.
 No HTTPS toda a comunicacao e´ criptografada.
 
 
-## Integridade
+### Integridade
 
 Não e´ possivel alterar os dados sem ser percebido (a grosso modo o pacote https vem com um lacre)[1]
 
