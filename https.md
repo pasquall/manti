@@ -114,5 +114,7 @@ mas ajuda na configuracao para forcar o uso do SSL.
 
 ##Referencias:
 [Teste sua implementacao](https://www.ssllabs.com/ssltest/index.html)
+
 [Dicas-L sobre HSTS](http://www.dicas-l.com.br/arquivo/habilitando_o_hsts_no_apache_e_nginx.php)
+
 [Guia de instalacao](http://www.certisign.com.br/atendimento-suporte/certificado-servidor/ssl-verisign/instalacao-configuracao)
