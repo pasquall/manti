@@ -6,6 +6,7 @@
 * Instalacao
 * Testes
 * HSTS
+* Mais informacoes
 * Referencias
 
 
@@ -13,7 +14,7 @@
 
 O HTTPS e´ um protocolo para comunicar-se de forma segura em redes, na verdade
 e´ uma implementacao do HTTP sobre SSL. Ele e´ usado basicamente para garantir
-a *privacidade* e a *autenticidade*.
+a *confidencialidade*, a *autenticidade* e a *integridade*.
 
 
 ### Autenticidade
@@ -32,13 +33,18 @@ independente que voce e´ voce mesmo. Para isso, eles possuem normas de verifi
 cacao para ter certeza deste fato.
 
 
-### Privacidade
+### Confidencialidade
 
 Quando uma requisicao HTTP e´ feita, todo trafego e´ transportado em texto 
 puro, desta forma, se sua conexao for interperceptada entre voce e o servidor 
 que esta acessando, sera´ possivel ler tudo que foi comunicado.
 
 No HTTPS toda a comunicacao e´ criptografada.
+
+
+## Integridade
+
+Não e´ possivel alterar os dados sem ser percebido (a grosso modo o pacote https vem com um lacre)[1]
 
 
 ## Certificadores
@@ -75,7 +81,7 @@ mais evidente para o visitante que esta´ em um ambiente seguro.
 
 ## Instalacao
 
-O processo de instalacao, comeca na escolha da entidade certificadora, depois
+O processo de instalacao[2], comeca na escolha da entidade certificadora, depois
 do tipo de certificado, feito isso voce devera gerar sua chave privada e um
 CSR (Certificate Signing Request). Sao dois arquivos, a chave privada devera
 ser guardada com muito cuidado, vazar esta informacao, significa que seu 
@@ -97,9 +103,7 @@ para receber seu certificado.
 
 Gosto muito de testes e realizar este procedimento apesar de simples pode 
 esconder problemas serios de seguranca, portanto, a recomendacao e´ realizar
-alguns testes.
-
-[Teste da instalacao](https://www.ssllabs.com/ssltest/index.html)
+alguns testes.[3]
 
 O site acima e´ bastante util para identificar estes problemas e indicar o que
 mais pode ser feito para melhorar a seguranca e diminuir a incompatibilidade
@@ -108,13 +112,19 @@ com alguns ambientes.
 
 ## HSTS
 
-O HSTS e´ um novo padrao de seguranca que ainda nao e´ amplamente utilizado,
+O HSTS[4] e´ um novo padrao de seguranca que ainda nao e´ amplamente utilizado,
 mas ajuda na configuracao para forcar o uso do SSL.
 
 
+## Mais informacoes
+[The First Few Milliseconds of an HTTPS Connection](http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html)
+
 ##Referencias:
-[Teste sua implementacao](https://www.ssllabs.com/ssltest/index.html)
+[1][Verificando a integridade dos dados](http://informatica.hsw.uol.com.br/criptografia7.htm)
 
-[Dicas-L sobre HSTS](http://www.dicas-l.com.br/arquivo/habilitando_o_hsts_no_apache_e_nginx.php)
+[2][Guia de instalacao](http://www.certisign.com.br/atendimento-suporte/certificado-servidor/ssl-verisign/instalacao-configuracao)
 
-[Guia de instalacao](http://www.certisign.com.br/atendimento-suporte/certificado-servidor/ssl-verisign/instalacao-configuracao)
+[3][Teste sua implementacao](https://www.ssllabs.com/ssltest/index.html)
+
+[4][Dicas-L sobre HSTS](http://www.dicas-l.com.br/arquivo/habilitando_o_hsts_no_apache_e_nginx.php)
+
